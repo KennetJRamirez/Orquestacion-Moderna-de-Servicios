@@ -1,0 +1,164 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, top=2.4cm, bottom=2.4cm, left=2.4cm, right=2.4cm]{geometry}
+\usepackage{times} % Times New Roman
+\setlength{\parindent}{0pt}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
+\usepackage[spanish]{babel}
+\usepackage{url}
+\usepackage{xurl}
+\usepackage{hyperref}
+
+
+\begin{document}
+
+\begin{center}
+    {\bfseries\uppercase{orquestacion moderna de servicios}} \\
+    {\itshape K.J Guzman Ramirez}\\
+    {\itshape 7690-21-2903 Universidad Mariano Galvez} \\
+    {\itshape Seminario de Tecnologias de Informacion} \\
+    {\itshape kguzmanr2@miumg.edu.gt} \\
+\end{center}
+
+\textbf{URL REPOSITORIO LA TEX: } \\
+https://github.com/KennetJRamirez/Orquestacion-Moderna-de-Servicios
+\\\\
+\vspace{1em}
+\noindent\textbf{Resumen}\\
+El trabajo de investitagion aborda herramientas, metodologías y enfoques modernos para el desarrollo, despliegue y gestión de aplicaciones y sistemas en entornos distribuidos y en la nube. Se centra en cómo automatizar y coordinar procesos complejos (orquestación de servidores), administrar cargas de trabajo y contenedores (Kubernetes), estructurar aplicaciones en módulos independientes (microservicios), controlar accesos y permisos de manera segura (OAuth 2.0) y aplicar buenas prácticas de desarrollo para lograr portabilidad, escalabilidad y consistencia entre entornos (12 Factor App). En conjunto, estos conceptos buscan mejorar eficiencia, resiliencia, productividad y flexibilidad en sistemas y aplicaciones modernas.
+. \\
+
+\noindent\textbf{Palabras clave: } servicios, nube, autenticacion, independiente
+
+\vspace{1em}
+\noindent\textbf{Orquestacion de servidores} \\
+Cuando nos referimos a orquestacion, estamos siempre haciendo referencia a una automatizacion pero mas ampliada. Y el uso de estas herramientas brindan a las organizaciones el poder controlar y automatizar flujos de trabajo que se encuentren de forma interconectada , sistemas informaticos, servicios e intermediarios como middlewares dentro de un entorno informatico. Es algo muy versatil y tambien pude ser aplicado a aquelos entornos distribuidos en la nube o en entornos propios , es decir en instalaciones. Todo esto para darnos como resultado el poder con grupos de tareas completas desde el comienzo hasta el final.
+\\
+El aplicar la orquestacion trae beneficios a las organizaciones, los cuales pueden parecer muy similares a una automatizacion , pero  aca se aplican a procesos mas robustos y extensos como:
+\begin{itemize}
+    \item Reduccion de costes: Al automatizar y coordinar tareas complejas , la orquestacion ayuda a reducir tiempo, esfuerzo y recursos. 
+    \item Precision: Se eliminan errores humanos, garantizando procesos mas confiables y consistentes.
+    \item Productividad: Libera cargas a empleados de tareas repetitivas, permitiendoles enfocarse en otras actividades.
+        \item Procesos estandarizados: Crea procedimientos uniformes en todos los sistemas, agilizando la implementacion de nuevos procesos.
+\end{itemize}
+Sin dejar de lado la nube, en la cual es aplicable y obteniendo los mismos beneficios de dicho proceso. Independiente del entorno, siempre se debe de elegir correctamente las herramientas , basandose en criterios como:
+\begin{itemize}
+    \item Necesidad empresarial
+    \item Facilidad de uso
+    \item Escalabilidad
+    \item Auditorias
+    \item Capacidad de analisis
+\end{itemize}
+
+\textbf{Kubernetes} \\
+Es una plataforma de codigo abierto que permite el poder gestionar cargas de trabajo y servicios en contenedores. Fue creado por Google en el 2014, el cual combina su experiencia con correr aplicaciones en gran escala.
+\\\\
+Tiene varias caracteristicas como:
+\begin{itemize}
+    \item Contenedores
+    \item Microservicios
+    \item Nube portable
+\end{itemize}
+Es decir es un entorno de administracion completamente centrado en contenedores. Se encarga de orquestar la infraestructura de equipo, redes y hacer que las cargas de procesos de trabajo para que el usuario final no deba de hacerlo manualmente. Haciendo que su enfoque sea de dos forma, como plataforma de servicio, como de infraestructura como servicio. 
+\\
+Su enfoque en contenedores ayuda a que cada imagen que se genera a partir del empaquetar una aplicacion ayuda a tener un entorno mas consistentes desde la etapa de desarrollo hasta la de produccion, siendo mejor opcion que las maquinas virtuales, brindando la opcion de monitoreo ya que todo sera refleado en el contenedor. Algunos beneficios de esto son:
+\begin{itemize}
+    \item Agil creacion y despliegue
+    \item Desarrollo, integracion y despliegue continuo
+    \item Observabilidad
+    \item Separar Devs y Ops
+    \item Portabilidad
+    \item Aislamiento de recursos
+    \item Administracion de recursos
+\end{itemize}
+
+\textbf{Microservicios } \\
+Este es un enfoque que permite el poder garantizar que nunca se caiga por completo todo un sistema, ya que se deslinda segun la funcionalidad que tendra el sistema, separando por modulos independientes que se comunican entre si, mas no dependen uno del otro. Haciendo que de tal forma se comuniquen unos con otros mediante APIS, permitiendo asi tener flexibilidad y un mejor rendimiento del mismo.
+Algunos de los beneficios que obtenemos son:
+\begin{itemize}
+    \item Escalabilidad
+    \item Resilencia
+    \item Mantenimiento
+    \item Reutilizacion
+    \item Aislamiento de errores
+\end{itemize}
+Siendo asi  una gran alternativa que permita que un sistema siempre este funcionando, solo en caso de ocurrir un fallo  comprometa a un servicio en especifico. Permitiendo detectar mas rapido donde esta y aislarlo,  ademas que permite el poder realizar cada uno de estos con cualquier lenguaje, permitiendo asi una mejor flexibilidad
+ \\ 
+Pero asi como se ve una gran alternativa, siempre resulta dificil implementar, debido a los recursos, no tener claro como funcionara el servicio , ademas de ser muy complejo cuando empresas que van comenzando quieren aplicar este enfoque, ya que conforme crezca mas el servicio, se va haciendo dificil de manejar y de darle mantenimiento.
+ \\
+
+
+ \textbf{OAuth 2.0 } \\
+Este es un factor de autorizacion que se emplea para otorgar permisos de acceso a aplicaciones o servicios a los usuarios , sin dar la contraseña, es decir , hace ese proceso en automatico por el usuario.
+Es un error confundir que ya por defecto es un protocolo de autenticacion ya que este no brinda la certeza de que la persona que esta accediendo sea quien dice ser. Por lo que este solo es un factor mas que puede ser usado para la autorizacion junto con otros, pero no reemplaza a todo lo que implica ser un protocolo de autenticacion, siendo mas usado para la generacion y manejo de los tokens.
+Algunos de los beneficios que obtenemos son:
+\begin{itemize}
+    \item Seguridad
+    \item Control de permisos
+    \item Flexibilidad
+    \item Reutilizacion
+    \item Facil revocacion
+\end{itemize}
+En OAuth 2.0, las concesiones son el conjunto de pasos que un cliente tiene que realizar para obtener la autorización de acceso a los recursos.
+ \\ 
+Pero asi como se ve una gran alternativa, siempre resulta dificil implementar, debido a los recursos, no tener claro como funcionara el servicio , ademas de ser muy complejo cuando empresas que van comenzando quieren aplicar este enfoque, ya que conforme crezca mas el servicio, se va haciendo dificil de manejar y de darle mantenimiento.
+ \\
+
+  \textbf{12 Factor App } \\
+Factor es principalmente un marco para construir aplicaciones de software como servicio – SaaS (Software as a Service) – en la nube. Para entender su enfoque y su aplicación es necesario conocer los tipos de soluciones cloud computing como IaaS, PaaS, SaaS.
+
+Y son:
+\begin{itemize}
+    \item Codebase
+    \item Dependencies
+    \item Configuration
+    \item Backing services
+    \item Build, release, run
+    \item Processes
+    \item Port binding
+    \item Concurrency
+    \item Disposability
+    \item Dev/prod parity
+    \item Logs
+    \item Admin processes
+\end{itemize}
+Estas prácticas abarcan desde la gestión del código fuente y las dependencias, hasta la configuración, el despliegue, los procesos y el manejo de logs. Su objetivo es garantizar que las aplicaciones sean portables entre distintos entornos, fáciles de desplegar y capaces de escalar sin necesidad de realizar cambios importantes en la arquitectura o en las herramientas de desarrollo. Al seguir los 12 factores, se minimizan los errores entre desarrollo y producción, se mejora la resiliencia del sistema y se facilita la automatización de tareas operativas y administrativas
+
+ \\
+
+
+\noindent\textbf{Observaciones y comentarios} 
+\begin{itemize}
+    \item{Es interesante cómo la orquestación y los microservicios transforman la manera de desarrollar y mantener aplicaciones, haciendo los sistemas más flexibles y confiables.}
+    \item{Resulta notable que prácticas como las 12 Factor App y herramientas como Kubernetes simplifiquen procesos complejos, permitiendo un despliegue más ágil y seguro en la nube.}
+\end{itemize}
+
+\noindent\textbf{Conclusiones} 
+\begin{itemize}
+    \item{La combinación de orquestación, microservicios y buenas prácticas como las 12 Factor App permite construir sistemas más eficientes, escalables y resilientes.}
+    \item {Herramientas como Kubernetes y protocolos como OAuth 2.0 facilitan la gestión segura, automatizada y consistente de aplicaciones en entornos modernos, optimizando productividad y reducción de errores.}
+\end{itemize}
+
+
+\begin{thebibliography}{9}
+
+\bibitem{ServiceNow2025}
+ServiceNow. (s.f.). \textit{What is IT Orchestration}. Recuperado de \url{https://www.servicenow.com/es/products/it-operations-management/what-is-it-orchestration.html}
+
+\bibitem{RedHat2025}
+Red Hat. (s.f.). \textit{What is Orchestration}. Recuperado de \url{https://www.redhat.com/es/topics/automation/what-is-orchestration}
+
+\bibitem{Fowler2025}
+Fowler, M. (s.f.). \textit{Microservices}. Recuperado de \url{https://martinfowler.com/articles/microservices.html}
+
+\bibitem{Auth02025}
+Auth0. (s.f.). \textit{What is OAuth 2}. Recuperado de \url{https://auth0.com/es/intro-to-iam/what-is-oauth-2}
+
+\end{thebibliography}
+
+\end{document}
+
+
+
+\end{document}
+
+
